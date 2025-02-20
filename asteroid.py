@@ -26,6 +26,8 @@ class Asteroid(CircleShape):
 
         asteroid1 = Asteroid(self.position.x, self.position.y, new_radius)
         asteroid1.velocity = velocity1
+        asteroid1.add(*self.groups())  # Add to the correct groups
 
         asteroid2 = Asteroid(self.position.x, self.position.y, new_radius)
         asteroid2.velocity = velocity2
+        asteroid2.add(*self.groups())  # Add to the correct groups
